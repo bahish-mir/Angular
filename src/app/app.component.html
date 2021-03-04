@@ -10,5 +10,5 @@
 у директивы нет своего html кода, а так нет никаких отличий от директивы и компонента
 -->
 
-<app-item *ngFor="let item of myNumbers" [value]="item"></app-item>
+<app-item *ngFor="let item of myNumbers" [value]="item" (selectEvent)="onSelect($event)"></app-item>
 

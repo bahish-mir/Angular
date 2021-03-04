@@ -21,5 +21,8 @@ export class AppComponent {
     }
   }
 
+  public onSelect(value: number): void {
+    this.selectedValue = value;
+  }
 
 }
