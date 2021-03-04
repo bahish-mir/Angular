@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public title = 'My first text!'; 
+  public title = 'My first text!';
   public counter = 0;
   public myNumbers: number[] = [4, 6, 8, 12, 7, 0];
   public isTitleShow = true;
+  public selectedValue: number;
 
   public increment(): void {
     this.counter++;
