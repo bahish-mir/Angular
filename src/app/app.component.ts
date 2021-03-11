@@ -13,14 +13,14 @@ export class AppComponent {
       name: 'First task',
       description: 'Some description',
       isComplete: false,
-      datetime: 12345678
+      datetime: 1615483089
     },
     {
       id: 1,
       name: 'Second task',
       description: 'Some description two',
       isComplete: false,
-      datetime: 1234241143
+      datetime: 1615483089
     }
   ];
 }
