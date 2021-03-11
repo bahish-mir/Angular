@@ -1,4 +1,11 @@
 <div class="task">
+  <ng-container *ngIf="isEdit then edit else view"></ng-container>
+
+  <div class="btn btn_edit" (click)="toggleEdit()">E</div>
+  <div class="btn btn_delete" (click)="deleteTask()">X</div>
+</div>
+
+<ng-template #view>
   <input type="checkbox" [(ngModel)]="task.isComplete">
 
   <div class="info">
@@ -7,6 +14,8 @@
   </div>
 
   <span class="date">{{ task.datetime | appDateTimePipe }}</span>
+</ng-template>
 
-  <div class="delete" (click)="deleteTask()">X</div>
-</div>
+<ng-template #edit>
+  <h2>Edit mode</h2>
+</ng-template>
