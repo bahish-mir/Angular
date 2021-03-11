@@ -1,3 +1,4 @@
+import { Task } from './interfaces/task.interface';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,23 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  public title = 'My first text!';
-  public counter = 0;
-  public myNumbers: number[] = [4, 6, 8, 12, 7, 0];
-  public isTitleShow = true;
-  public selectedValue: number;
-
-  public increment(): void {
-    this.counter++;
-    this.myNumbers.push(this.counter);
-    if (this.myNumbers.length > 10) {
-      this.isTitleShow = false;
+  public taskList: Task[] = [
+    {
+      id: 0,
+      name: 'First task',
+      description: 'Some description',
+      isComplete: false,
+      datetime: 12345678
+    },
+    {
+      id: 1,
+      name: 'Second task',
+      description: 'Some description two',
+      isComplete: false,
+      datetime: 1234241143
     }
-  }
-
-  public onSelect(value: number): void {
-    this.selectedValue = value;
-  }
-
+  ];
 }
