@@ -19,8 +19,19 @@ export class AppComponent {
       id: 1,
       name: 'Second task',
       description: 'Some description two',
-      isComplete: false,
+      isComplete: true,
       datetime: 1615483089
     }
   ];
+
+  //(Двустороння привязка данных)
+  // public testValue = 'Text';
+
+  // public addOne(): void {
+  //   this.testValue += '1';
+  // }
+
+  public deleteItem(id: number): void {
+    this.taskList = this.taskList.filter(item => item.id !== id);
+  }
 }

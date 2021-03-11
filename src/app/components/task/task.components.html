@@ -1,5 +1,5 @@
 <div class="task">
-  <input type="checkbox">
+  <input type="checkbox" [(ngModel)]="task.isComplete">
 
   <div class="info">
     <span class="info__name">{{ task.name }}</span>
@@ -7,4 +7,6 @@
   </div>
 
   <span class="date">{{ task.datetime | appDateTimePipe }}</span>
+
+  <div class="delete" (click)="deleteTask()">X</div>
 </div>

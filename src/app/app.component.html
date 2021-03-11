@@ -1,3 +1,7 @@
 <div class="container">
-  <app-task [task]="item" *ngFor="let item of taskList"></app-task>
+  <app-task (deleteEvent)="deleteItem($event)" [task]="item" *ngFor="let item of taskList"></app-task>
 </div>
+
+<!--<input type="text" [(ngModel)]="testValue">-->
+<!--<button (click)="addOne()">Add 1</button>-->
+

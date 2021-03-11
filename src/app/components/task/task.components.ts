@@ -1,5 +1,5 @@
 import { Task } from './../../interfaces/task.interface';
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-task',
@@ -9,5 +9,10 @@ import { Component, Input } from '@angular/core';
 
 export class TaskComponent {
   @Input() public task: Task;
+  @Output() public deleteEvent = new EventEmitter<number>();
+
+  public deleteTask(): void {
+    this.deleteEvent.next(this.task.id);
+  }
 }
 
