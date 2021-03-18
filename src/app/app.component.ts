@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     console.log('App component inited!');
-    this.taskList = this.dataService.getTask();
+    this.dataService.getTask().subscribe(data => this.taskList = data);
   }
 
   //(Двустороння привязка данных)
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   // }
 
   public deleteItem(id: number): void {
-    this.taskList = this.dataService.deleteTask(id);
+    //this.taskList = this.dataService.deleteTask(id);
   }
 }
 

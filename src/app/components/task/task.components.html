@@ -6,23 +6,21 @@
 </div>
 
 <ng-template #view>
-  <input type="checkbox" [(ngModel)]="task.isComplete">
+  <input type="checkbox" [(ngModel)]="task.complete">
 
   <div class="info">
-    <span class="info__name">{{ task.name }}</span>
-    <span class="info__description">{{ task.description }}</span>
+    <span class="info__name">{{ task.title }}</span>
   </div>
 
-  <span class="date">{{ task.datetime | appDateTimePipe }}</span>
+  <!--<span class="date">{{ task.datetime | appDateTimePipe }}</span>-->
 </ng-template>
 
 <ng-template #edit>
   <div class="info">
-    <input type="text" class="info__name" [(ngModel)]="task.name">
-    <input type="text" class="info__description" [(ngModel)]="task.description">
+    <input type="text" class="info__name" [(ngModel)]="task.title">
   </div>
 
-  <span class="date">{{ task.datetime | appDateTimePipe }}</span>
+  <!--<span class="date">{{ task.datetime | appDateTimePipe }}</span>-->
 </ng-template>
 
 <!-- DI - Dependensy injection (внедрение зависимостей) -->
