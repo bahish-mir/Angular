@@ -10,14 +10,22 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class TaskComponent {
   @Input() public task: Task;
   @Output() public deleteEvent = new EventEmitter<number>();
-  public isEdit: boolean;
+  static editTaskId: number;
 
   public deleteTask(): void {
     this.deleteEvent.next(this.task.id);
   }
 
   public toggleEdit(): void {
-    this.isEdit = !this.isEdit;
+    if (this.isEdit) {
+      TaskComponent.editTaskId = null;
+    } else {
+      TaskComponent.editTaskId = this.task.id;
+    }
+  }
+
+  public get isEdit(): boolean {
+    return TaskComponent.editTaskId === this.task.id;
   }
 }
 
