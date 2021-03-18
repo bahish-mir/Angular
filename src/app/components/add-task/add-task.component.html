@@ -1,4 +1,15 @@
 <form [formGroup]="taskForm" class="container">
-  <input type="text" class="container__input" formControlName="taskName" placeholder="Task name...">
-  <button class="container__add">ADD</button>
+  <input
+  type="text"
+  class="container__input" [class.container__input_error]="taskName.errors && taskName.touched"
+  formControlName="taskName" p
+  laceholder="Task name..."
+  >
+  <button (click)="addTask()" class="container__add">ADD</button>
+
+  <div class="errors" *ngIf="taskName.errors && taskName.touched">
+    <span *ngIf="taskName.errors.required">Required field</span>
+    <span *ngIf="taskName.errors.minlength">Minimum 4 sumbols</span>
+    <span *ngIf="taskName.errors.maxlength">Maximum 20 sumbols</span>
+  </div>
 </form>

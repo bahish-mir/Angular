@@ -18,6 +18,13 @@ export class AddTaskComponent implements OnInit {
     this.initForm();
   }
 
+  public addTask(): void {
+    if (this.taskForm.valid) {
+      console.log(this.taskForm.value);
+
+    }
+  }
+
   private initFields(): void {
     this.taskName = new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(20)]);
   }

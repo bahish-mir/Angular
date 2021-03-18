@@ -5,6 +5,7 @@
   display: flex;
   padding: 5px;
   box-sizing: border-box;
+  position: relative;
 
   &__input {
     outline: none;
@@ -23,6 +24,15 @@
 
   &__add {
     width: 100%;
+  }
+
+  .errors {
+    color: red;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    font-size: 12px;
   }
 
 }
