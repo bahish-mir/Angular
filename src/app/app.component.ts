@@ -1,6 +1,7 @@
 import { DataService } from './services/data.service';
 import { Task } from './interfaces/task.interface';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,14 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
     public taskList: Task[] = [];
+    //public taskList: Observable<Task[]>;
 
   constructor(private dataService: DataService) { } // сколько модулей мы подключаем в сервис - столько экземпляров сервиса и создается
 
   public ngOnInit(): void {
-    console.log('App component inited!');
+    //console.log('App component inited!');
     this.dataService.getTask().subscribe(data => this.taskList = data);
+    //this.taskList=this.dataService.getTask();
   }
 
   //(Двустороння привязка данных)
@@ -26,7 +29,7 @@ export class AppComponent implements OnInit {
   // }
 
   public deleteItem(id: number): void {
-    //this.taskList = this.dataService.deleteTask(id);
+    this.taskList = this.taskList.filter(item => item.id !== id);
   }
 }
 
