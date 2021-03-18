@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   // }
 
   public deleteItem(id: number): void {
-    this.dataService.deleteTask(id);
+    this.taskList = this.dataService.deleteTask(id);
   }
 }
 

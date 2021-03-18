@@ -24,8 +24,9 @@ export class DataService {
     return this.taskList;
   }
 
-  public deleteTask(id: number): void {
+  public deleteTask(id: number): Task[] {
     this.taskList = this.taskList.filter(item => item.id !== id);
+    return this.taskList;
   }
 
 }
