@@ -1,3 +1,4 @@
+import { DataService } from './services/data.service';
 import { Task } from './interfaces/task.interface';
 import { Component } from '@angular/core';
 
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(private dataService: DataService) { }// сколько модулей мы подключаем в сервис - столько экземпляров сервиса и создается
+
   //(Двустороння привязка данных)
   // public testValue = 'Text';
 
