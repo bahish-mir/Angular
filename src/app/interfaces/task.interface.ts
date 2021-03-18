@@ -1,9 +1,7 @@
 export interface Task {
   id: number;
-  name:string;
-  description: string;
-  datetime: number;
-  isComplete: boolean;
+  title: string;
+  complete: boolean;
 }
 
 /*export interface Task<T> {
