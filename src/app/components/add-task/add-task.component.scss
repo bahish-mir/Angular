@@ -3,6 +3,7 @@
   margin-top: 20px;
   box-shadow: 0 0 10px black;
   display: flex;
+  padding: 5px;
   box-sizing: border-box;
 
   &__input {
@@ -14,6 +15,10 @@
     padding-right: 5px;
     margin-right: 5px;
     min-width: 80%;
+
+    &_error {
+      border: 1px solid red;
+    }
   }
 
   &__add {
