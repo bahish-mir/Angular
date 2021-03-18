@@ -7,23 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public taskList: Task[] = [
-    {
-      id: 0,
-      name: 'First task',
-      description: 'Some description',
-      isComplete: false,
-      datetime: 1615483089
-    },
-    {
-      id: 1,
-      name: 'Second task',
-      description: 'Some description two',
-      isComplete: true,
-      datetime: 1615483089
-    }
-  ];
-
   //(Двустороння привязка данных)
   // public testValue = 'Text';
 
@@ -32,6 +15,6 @@ export class AppComponent {
   // }
 
   public deleteItem(id: number): void {
-    this.taskList = this.taskList.filter(item => item.id !== id);
+
   }
 }

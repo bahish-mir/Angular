@@ -1,7 +1,7 @@
 <div class="task">
   <ng-container *ngIf="isEdit then edit else view"></ng-container>
 
-  <div class="btn btn_edit" [class.btn_active]="isEdit" [style.color]="'red'" (click)="toggleEdit()">E</div>
+  <div class="btn btn_edit" [class.btn_active]="isEdit" (click)="toggleEdit()">E</div>
   <div class="btn btn_delete" (click)="deleteTask()">X</div>
 </div>
 
@@ -24,3 +24,5 @@
 
   <span class="date">{{ task.datetime | appDateTimePipe }}</span>
 </ng-template>
+
+<!-- DI - Dependensy injection (внедрение зависимостей) -->
