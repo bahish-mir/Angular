@@ -17,5 +17,10 @@
 </ng-template>
 
 <ng-template #edit>
-  <h2>Edit mode</h2>
+  <div class="info">
+    <span class="info__name">{{ task.name }}</span>
+    <span class="info__description">{{ task.description }}</span>
+  </div>
+
+  <span class="date">{{ task.datetime | appDateTimePipe }}</span>
 </ng-template>
