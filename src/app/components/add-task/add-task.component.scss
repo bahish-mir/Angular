@@ -1,0 +1,23 @@
+.container {
+  width: 400px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px black;
+  display: flex;
+  box-sizing: border-box;
+
+  &__input {
+    outline: none;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-right: 5px;
+    min-width: 80%;
+  }
+
+  &__add {
+    width: 100%;
+  }
+
+}
