@@ -1,4 +1,4 @@
-<div class="container" appFirst>
+<div class="container" appFirst [color]="'lightblue'">
   <app-task (deleteEvent)="deleteItem($event)" [task]="item" *ngFor="let item of taskList"></app-task> <!--| async -->
 </div>
 

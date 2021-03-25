@@ -1,3 +1,4 @@
+import { EnterPressDirective } from './components/directives/enter.directive';
 import { FirstDirective } from './components/directives/first.directive';
 import { DateTimePipe } from './pipes/datetime.pipe';
 import { TaskComponent } from './components/task/task.components';
@@ -15,7 +16,8 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
     TaskComponent,
     DateTimePipe,
     AddTaskComponent,
-    FirstDirective
+    FirstDirective,
+    EnterPressDirective
   ],
   imports: [
     BrowserModule,
