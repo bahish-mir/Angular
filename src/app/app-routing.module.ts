@@ -4,10 +4,6 @@ import { AboutComponent } from './modules/about/about.component';
 import { TasksComponent } from './modules/tasks/tasks.component';
 
 @NgModule({
-  declarations: [
-    TasksComponent,
-    AboutComponent
-  ],
   imports: [
     RouterModule.forRoot([
       {
