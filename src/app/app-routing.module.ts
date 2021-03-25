@@ -21,7 +21,7 @@ import { TasksComponent } from './modules/tasks/tasks.component';
       },
       {
         path: 'about',
-        component: AboutComponent
+        loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)
       }
     ])
   ],

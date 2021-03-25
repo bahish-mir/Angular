@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about.component';
 import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
@@ -7,7 +8,13 @@ import { CommonModule } from '@angular/common';
     AboutComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: AboutComponent
+      }
+    ])
   ]
 })
 
