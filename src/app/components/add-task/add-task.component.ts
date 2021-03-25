@@ -37,10 +37,8 @@ export class AddTaskComponent implements OnInit {
     }
   }
 
-  public keyPressHandler(event: KeyboardEvent):void{
-    if( event.code === 'Enter' ){
-      this.addTask();
-    }
+  public enterPressHandler():void{
+   this.addTask();
   }
 
   private clearForm(): void{

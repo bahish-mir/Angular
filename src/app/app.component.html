@@ -1,9 +1,3 @@
-<div class="container" appFirst [color]="'lightblue'">
-  <app-task (deleteEvent)="deleteItem($event)" [task]="item" *ngFor="let item of taskList"></app-task> <!--| async -->
+<div class="header">
+  task List
 </div>
-
-<app-add-task (newTaskAdd)="addNewTask($event)"></app-add-task>
-
-<!--<input type="text" [(ngModel)]="testValue">-->
-<!--<button (click)="addOne()">Add 1</button>-->
-

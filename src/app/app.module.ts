@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import { TasksComponent } from './modules/tasks/tasks.component';
+import { AboutComponent } from './modules/about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
     DateTimePipe,
     AddTaskComponent,
     FirstDirective,
-    EnterPressDirective
+    EnterPressDirective,
+    TasksComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
