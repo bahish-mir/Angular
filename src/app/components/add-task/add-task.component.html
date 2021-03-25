@@ -4,6 +4,7 @@
   class="container__input" [class.container__input_error]="taskName.errors && taskName.touched"
   formControlName="taskName" p
   laceholder="Task name..."
+  (keypress)="keyPressHandler($event)"
   >
   <button (click)="addTask()" class="container__add">ADD</button>
 

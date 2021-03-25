@@ -31,6 +31,11 @@ export class AppComponent implements OnInit {
   public deleteItem(id: number): void {
     this.taskList = this.taskList.filter(item => item.id !== id);
   }
+
+  public addNewTask(task: Task):void {
+    //this.taskList.push(task);
+    this.taskList = [...this.taskList, task];
+  }
 }
 
 /*

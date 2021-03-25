@@ -1,3 +1,4 @@
+import { FirstDirective } from './components/directives/first.directive';
 import { DateTimePipe } from './pipes/datetime.pipe';
 import { TaskComponent } from './components/task/task.components';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
     AppComponent,
     TaskComponent,
     DateTimePipe,
-    AddTaskComponent
+    AddTaskComponent,
+    FirstDirective
   ],
   imports: [
     BrowserModule,
