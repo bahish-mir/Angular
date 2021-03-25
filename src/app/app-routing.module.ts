@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TaskComponent } from './components/task/task.components';
 import { AboutComponent } from './modules/about/about.component';
 import { TasksComponent } from './modules/tasks/tasks.component';
 
@@ -18,7 +17,7 @@ import { TasksComponent } from './modules/tasks/tasks.component';
       },
       {
         path: 'tasks',
-        component: TaskComponent
+        loadChildren: ()=> import('./modules/tasks/tasks.module').then(m => m.TasksModule)
       },
       {
         path: 'about',
