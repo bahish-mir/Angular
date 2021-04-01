@@ -1,5 +1,10 @@
 <div class="header">
   task List
+
+  <div class="links">
+    <span routerLink="tasks" routerLinkActive="active-link">Tasks</span> <!--<span (click)="goTo('tasks')">Tasks</span>-->
+    <span routerLink="about" routerLinkActive="active-link">About</span> <!--<span (click)="goTo('about')">Tasks</span>-->
+  </div>
 </div>
 
 <router-outlet></router-outlet>

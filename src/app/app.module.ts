@@ -18,3 +18,4 @@ import { RoutingModule } from './app-routing.module';
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+//https://metanit.com/web/angular2/
