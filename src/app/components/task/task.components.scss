@@ -68,6 +68,15 @@
       background-color: yellow;
     }
   }
+
+  .details {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-weight: bold;
+    color: blue;
+  }
 }
 
 
