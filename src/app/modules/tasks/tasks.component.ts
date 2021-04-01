@@ -16,7 +16,7 @@ export class TasksComponent implements OnInit {
 
   public ngOnInit(): void {
     //console.log('App component inited!');
-    this.dataService.getTask().subscribe(data => this.taskList = data);
+    this.dataService.getTasks().subscribe(data => this.taskList = data);
     //this.taskList=this.dataService.getTask();
   }
 

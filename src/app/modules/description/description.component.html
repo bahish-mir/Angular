@@ -1,2 +1,6 @@
 <h2>Full information about Task</h2>
 
+<ng-container *ngIf="(taskInfo | async) as task">
+  <h3>{{ task.title }}</h3>
+  <h3>{{ task.id }}</h3>
+</ng-container>
