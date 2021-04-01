@@ -3,7 +3,7 @@
 
   <div class="btn btn_edit" [class.btn_active]="isEdit" (click)="toggleEdit()">E</div>
   <div class="btn btn_delete" (click)="deleteTask()">X</div>
-  <div class="details" [routerLink]="['/description', 'wqdqd']">Show details</div>
+  <div class="details" [routerLink]="['/description', task.id]">Show details</div>
 </div>
 
 <ng-template #view>
